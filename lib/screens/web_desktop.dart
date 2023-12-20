@@ -1,8 +1,11 @@
-import 'package:fwebportfolio/hover_text_widget.dart';
+import 'package:fwebportfolio/widgets/hover_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:fwebportfolio/widgets/intro.dart';
+import 'package:fwebportfolio/widgets/about.dart';
+import 'package:fwebportfolio/widgets/skills.dart';
 
 class DesktopWeb extends StatefulWidget {
   DesktopWeb({super.key});
@@ -25,220 +28,73 @@ class _DesktopWebState extends State<DesktopWeb> {
             children: [
               Intro(devWidth: devWidth),
               About(devWidth: devWidth),
-            ],
-          )),
-    );
-  }
-}
-
-class About extends StatelessWidget {
-  const About({
-    super.key,
-    required this.devWidth,
-  });
-
-  final double devWidth;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: kBlack,
-      height: 800,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
-            child: Container(
-              child: Image(
-                image: AssetImage('assets/YAD_BIG.jpg'),
-                alignment: Alignment.centerRight,
-                fit: BoxFit.cover,
-              ),
-              width: devWidth > 1200 ? 400 : devWidth * 0.5,
-              height: 600,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(5, 0, 50, 0),
-            child: Container(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SelectableText(
-                      'Who is Yücel Arda DEMİRCİ',
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.oswald().fontFamily,
-                          fontSize: devWidth > 1200 ? 50 : 30,
-                          color: kAccent,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    SelectableText(
-                      'A Bit About Me',
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.lilitaOne().fontFamily,
-                          fontSize: devWidth > 1200 ? 35 : 20,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w900),
-                    ),
-                    SelectableText(''),
-                    SelectableText(
-                      kAbout,
-                      style: TextStyle(
-                          fontFamily: GoogleFonts.rowdies().fontFamily,
-                          fontSize: devWidth > 1200 ? 20 : 15,
-                          color: Colors.white,
-                          fontWeight: FontWeight.normal),
-                    ),
-                  ],
-                ),
-              ),
-              width: devWidth > 1200 ? 600 : devWidth * 0.5,
-              height: 600,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Intro extends StatelessWidget {
-  const Intro({
-    super.key,
-    required this.devWidth,
-  });
-
-  final double devWidth;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Secondery,
-      height: 800,
-      width: devWidth * 1,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 100),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Container(
-                width: devWidth * 0.5,
-                child: Center(
+              Skills(devWidth: devWidth),
+              Container(
+                height: 800,
+                color: kBlack,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(200, 0, 00, 0),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            height: 200,
-                          ),
-                          SelectableText(
-                            'HELLO WOLRD! I AM',
-                            style: TextStyle(
-                                fontFamily: GoogleFonts.oswald().fontFamily,
-                                color: kAccent,
-                                fontSize: devWidth * 0.011,
-                                fontWeight: FontWeight.w900),
-                            textAlign: TextAlign.left,
-                          ),
-                          SelectableText(
-                            'Yücel Arda DEMIRCI',
-                            style: TextStyle(
-                                fontFamily: GoogleFonts.oswald().fontFamily,
-                                fontSize: devWidth * 0.04,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w900),
-                          ),
-                          SelectableText(
-                            'Your Local Developer',
-                            style: TextStyle(
-                                fontFamily: GoogleFonts.oswald().fontFamily,
-                                fontSize: devWidth * 0.01,
-                                color: Colors.white54),
-                          ),
-                          SelectableText(
-                            'MIS Student',
-                            style: TextStyle(
-                                fontSize: devWidth * 0.01,
-                                color: Colors.white54),
-                          ),
-                          SizedBox(
-                            height: 50,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              AnimatedButton(
-                                borderWidth: 4,
-                                selectedBackgroundColor: kAccent,
-                                borderColor: kAccent,
-                                backgroundColor: Colors.transparent,
-                                animatedOn: AnimatedOn.onHover,
-                                onPress: () {
-                                  print('test');
-                                },
-                                width: 200,
-                                text: 'Contact Me!',
-                                selectedTextColor: Colors.black,
-                                transitionType:
-                                    TransitionType.LEFT_BOTTOM_ROUNDER,
-                                textStyle: TextStyle(
-                                    fontFamily: GoogleFonts.oswald().fontFamily,
-                                    fontSize: devWidth * 0.01,
-                                    letterSpacing: 5,
-                                    color: kAccent,
-                                    fontWeight: FontWeight.w900),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(100, 50, 0, 0),
+                        child: Column(
+                          children: [
+                            SelectableText(
+                              'My Experiences',
+                              style: TextStyle(
+                                  color: kAccent,
+                                  fontFamily: GoogleFonts.oswald().fontFamily,
+                                  fontSize: devWidth * 0.03,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                            SizedBox(
+                              height: 50,
+                            ),
+                            Container(
+                              width: devWidth * 0.2,
+                              child: Image(
+                                image: AssetImage('assets/balogobeyaz.jpg'),
+                                fit: BoxFit.fitWidth,
                               ),
-                              SizedBox(
-                                width: 20,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SelectableText(
+                              'Bilişim Academy',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontFamily: GoogleFonts.roboto().fontFamily,
+                                fontSize: devWidth * 0.03,
+                                fontWeight: FontWeight.w900,
                               ),
-                              AnimatedButton(
-                                borderWidth: 4,
-                                selectedBackgroundColor: Colors.white,
-                                backgroundColor: Colors.transparent,
-                                animatedOn: AnimatedOn.onHover,
-                                onPress: () {
-                                  print('test');
-                                },
-                                width: 200,
-                                text: 'Download CV',
-                                selectedTextColor: Colors.black,
-                                transitionType: TransitionType.CENTER_LR_IN,
-                                textStyle: TextStyle(
-                                    fontFamily: GoogleFonts.oswald().fontFamily,
-                                    fontSize: devWidth * 0.01,
-                                    letterSpacing: 5,
-                                    color: kAccent,
-                                    fontWeight: FontWeight.w900),
-                              ),
-                            ],
-                          ),
-                        ],
+                            ),
+                            SelectableText(
+                              'IT Intern',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: devWidth * 0.01),
+                            ),
+                            SelectableText(
+                              kExp,
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ),
-            Container(
-              child: Image(
-                image: AssetImage('assets/dev.png'),
-                alignment: Alignment.topLeft,
-              ),
-              height: 700,
-              width: devWidth * 0.5,
-            )
-          ],
-        ),
-      ),
+              )
+            ],
+          )),
     );
   }
 }
