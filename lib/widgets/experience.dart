@@ -3,84 +3,71 @@ import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Experience extends StatelessWidget {
-  const Experience({
-    super.key,
-    required this.devWidth,
-  });
+  const Experience({super.key, required this.devWidth});
 
   final double devWidth;
-
   @override
   Widget build(BuildContext context) {
+    double devHeight = MediaQuery.of(context).size.height;
+    double devWidth = MediaQuery.of(context).size.width;
     return Container(
+      width: devWidth,
       height: 800,
       color: kBlack,
-      child: Padding(
-        padding: EdgeInsets.fromLTRB(200, 0, 00, 0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(100, 50, 0, 0),
-              child: Column(
-                children: [
-                  SelectableText(
-                    'My Experiences',
-                    style: TextStyle(
-                        color: kAccent,
-                        fontFamily: GoogleFonts.oswald().fontFamily,
-                        fontSize: devWidth * 0.03,
-                        fontWeight: FontWeight.w900),
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  Container(
-                    width: devWidth * 0.2,
-                    child: Image(
-                      image: AssetImage('assets/balogobeyaz.jpg'),
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ],
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SizedBox(width: devWidth * 0.1),
+          Column(
+            children: [
+              Text('Experience',
+                  style: TextStyle(
+                    color: kAccent,
+                    fontSize: 50,
+                    fontFamily: GoogleFonts.oswald().fontFamily,
+                  )),
+              SizedBox(height: 80),
+              Image(
+                image: AssetImage('assets/balogobeyaz.jpg'),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SelectableText(
-                    'Bilişim Academy',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontFamily: GoogleFonts.roboto().fontFamily,
-                      fontSize: devWidth * 0.03,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                  SelectableText(
-                    'IT Intern',
-                    style: TextStyle(
-                        color: Colors.white, fontSize: devWidth * 0.01),
-                  ),
-                  Row(
-                    children: [
-                      SelectableText(
-                        kExp,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: devWidth * 0.01,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+            ],
+          ),
+          SizedBox(width: devWidth * 0.05),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(height: 150),
+              Text(
+                'Bilişim Academy',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50,
+                  fontFamily: GoogleFonts.oswald().fontFamily,
+                ),
               ),
-            ),
-          ],
-        ),
+              Text(
+                'IT Intern',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontFamily: GoogleFonts.oswald().fontFamily,
+                ),
+              ),
+              Container(
+                constraints: BoxConstraints(maxWidth: devWidth * 0.5),
+                child: Text(
+                  kExp,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15,
+                    fontFamily: GoogleFonts.oswald().fontFamily,
+                  ),
+                  overflow: TextOverflow.clip,
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

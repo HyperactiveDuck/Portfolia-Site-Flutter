@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:fwebportfolio/widgets/cert.dart';
 import 'package:fwebportfolio/widgets/projects.dart';
+import 'package:fwebportfolio/widgets/connect.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:fwebportfolio/widgets/intro.dart';
@@ -25,18 +26,20 @@ class _DesktopWebState extends State<DesktopWeb> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: kBlack, // background color
-          appBar: MyAppBar(),
-          body: ListView(
-            children: [
-              Intro(devWidth: devWidth),
-              About(devWidth: devWidth),
-              Skills(devWidth: devWidth),
-              Experience(devWidth: devWidth),
-              Projects(devWidth: devWidth),
-              Certificate(),
-            ],
-          )),
+        backgroundColor: kBlack, // background color
+        appBar: MyAppBar(),
+        body: ListView(
+          children: [
+            Intro(devWidth: devWidth),
+            About(devWidth: devWidth),
+            Skills(devWidth: devWidth),
+            Experience(devWidth: devWidth),
+            Projects(devWidth: devWidth),
+            Certificate(devWidth: devWidth),
+            Connect(devWidth: devWidth)
+          ],
+        ),
+      ),
     );
   }
 }

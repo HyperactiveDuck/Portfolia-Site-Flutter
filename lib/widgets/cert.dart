@@ -5,54 +5,56 @@ import 'package:google_fonts/google_fonts.dart';
 class Certificate extends StatelessWidget {
   const Certificate({
     super.key,
+    required this.devWidth,
   });
+
+  final double devWidth;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        color: Colors.black,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SelectableText(
-              'Certifications',
-              style: GoogleFonts.oswald(
-                  color: kAccent, fontSize: 40, fontWeight: FontWeight.w500),
-            ),
-            Row(
-              children: [
-                CertCard(
-                  certName: 'Cisco CyberOps',
-                  certImage: Image(
-                    image: AssetImage('assets/cyberops.png'),
-                    width: 200,
-                  ),
+    return Container(
+      color: Colors.black,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SelectableText(
+            'Certifications',
+            style: GoogleFonts.oswald(
+                color: kAccent, fontSize: 40, fontWeight: FontWeight.w500),
+          ),
+          Row(
+            children: [
+              CertCard(
+                certName: 'Cisco CyberOps',
+                certImage: Image(
+                  image: AssetImage('assets/cyberops.png'),
+                  width: devWidth * 0.1,
+                  fit: BoxFit.fitWidth,
                 ),
-                CertCard(
-                  certName: 'The App Brewery - Flutter Bootcamp',
-                  certImage: Image(
-                    image: AssetImage('assets/UCCert.jpg'),
-                    width: 200,
-                  ),
+              ),
+              CertCard(
+                certName: 'The App Brewery - Flutter Bootcamp',
+                certImage: Image(
+                  image: AssetImage('assets/UCCert.jpg'),
+                  width: 200,
                 ),
-              ],
-            ),
-            SizedBox(height: 150),
-            Row(
-              children: [
-                CertCard(
-                  certName: 'Google Professional Project Menager',
-                  certImage: Image.asset('assets/google.jpg'),
-                ),
-                CertCard(
-                  certName: 'Schneider Electric Sales & Marketing',
-                  certImage: Image.asset('assets/schneider.png'),
-                ),
-              ],
-            )
-          ],
-        ),
+              ),
+            ],
+          ),
+          SizedBox(height: devWidth * 0.05),
+          Row(
+            children: [
+              CertCard(
+                certName: 'Google Professional Project Menager',
+                certImage: Image.asset('assets/google.jpg'),
+              ),
+              CertCard(
+                certName: 'Schneider Electric Sales & Marketing',
+                certImage: Image.asset('assets/schneider.png'),
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

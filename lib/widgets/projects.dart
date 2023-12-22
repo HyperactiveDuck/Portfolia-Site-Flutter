@@ -12,70 +12,67 @@ class Projects extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        color: Secondery,
-        child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: devWidth * 0.1, vertical: 50),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SelectableText(
-                'Projects',
-                style: TextStyle(
-                    color: kAccent,
-                    fontFamily: GoogleFonts.oswald().fontFamily,
-                    fontSize: devWidth * 0.03,
-                    fontWeight: FontWeight.w900),
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ProjectCardUAFW(
-                    devWidth: devWidth,
-                    projectText: 'UAFW',
-                    projectImage: Image(
-                      image: AssetImage('assets/UAFW_1.png'),
-                    ),
+    return Container(
+      color: Secondery,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: devWidth * 0.1, vertical: 50),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SelectableText(
+              'Projects',
+              style: TextStyle(
+                  color: kAccent,
+                  fontFamily: GoogleFonts.oswald().fontFamily,
+                  fontSize: devWidth * 0.03,
+                  fontWeight: FontWeight.w900),
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ProjectCardUAFW(
+                  devWidth: devWidth,
+                  projectText: 'UAFW',
+                  projectImage: Image(
+                    image: AssetImage('assets/UAFW_1.png'),
                   ),
-                  ProjectCard(
-                    devWidth: devWidth,
-                    projectText: 'To Do App',
-                    projectImage: Image(
-                      image: AssetImage('assets/yadtodo_3.png'),
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 50,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ProjectCard(
-                    devWidth: devWidth,
-                    projectText: 'Group Chat',
-                    projectImage: Image(
-                      image: AssetImage('assets/gc1.png'),
-                    ),
+                ),
+                ProjectCard(
+                  devWidth: devWidth,
+                  projectText: 'To Do App',
+                  projectImage: Image(
+                    image: AssetImage('assets/yadtodo_3.png'),
                   ),
-                  ProjectCard(
-                    devWidth: devWidth,
-                    projectText: 'Klima',
-                    projectImage: Image(
-                      image: AssetImage('assets/klima1.png'),
-                    ),
+                )
+              ],
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ProjectCard(
+                  devWidth: devWidth,
+                  projectText: 'Group Chat',
+                  projectImage: Image(
+                    image: AssetImage('assets/gc1.png'),
                   ),
-                ],
-              )
-            ],
-          ),
+                ),
+                ProjectCard(
+                  devWidth: devWidth,
+                  projectText: 'Klima',
+                  projectImage: Image(
+                    image: AssetImage('assets/klima1.png'),
+                  ),
+                ),
+              ],
+            )
+          ],
         ),
       ),
     );
