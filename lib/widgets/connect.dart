@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fwebportfolio/widgets/hover_text_widget.dart';
+import 'dart:html' as html;
 
 class Connect extends StatelessWidget {
   const Connect({
@@ -58,8 +59,14 @@ class Connect extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 100),
-                    HoverTextWidget(text: 'GET IN TOUCH →'),
+                    const SizedBox(height: 100),
+                    GestureDetector(
+                      onTap: () {
+                        html.window.open(
+                            'mailto:demirciyucelarda@gmail.com', 'new tab');
+                      },
+                      child: const HoverTextWidget(text: 'GET IN TOUCH →'),
+                    ),
                     SelectableText(
                       '(or copy) demirciyucelarda@gmail.com',
                       style: TextStyle(

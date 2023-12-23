@@ -11,10 +11,10 @@ class HoverTextWidget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _HoverTextWidgetState createState() => _HoverTextWidgetState();
+  HoverTextWidgetState createState() => HoverTextWidgetState();
 }
 
-class _HoverTextWidgetState extends State<HoverTextWidget> {
+class HoverTextWidgetState extends State<HoverTextWidget> {
   bool _isHovered = false;
   double _lineWidth = 0.0;
 

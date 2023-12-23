@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'dart:html' as html;
 
 class Experience extends StatelessWidget {
   const Experience({super.key, required this.devWidth});
@@ -8,7 +9,6 @@ class Experience extends StatelessWidget {
   final double devWidth;
   @override
   Widget build(BuildContext context) {
-    double devHeight = MediaQuery.of(context).size.height;
     double devWidth = MediaQuery.of(context).size.width;
     return Container(
       width: devWidth,
@@ -26,9 +26,17 @@ class Experience extends StatelessWidget {
                     fontSize: 50,
                     fontFamily: GoogleFonts.oswald().fontFamily,
                   )),
-              SizedBox(height: 80),
-              Image(
-                image: AssetImage('assets/balogobeyaz.jpg'),
+              const SizedBox(height: 80),
+              MouseRegion(
+                cursor: SystemMouseCursors.click,
+                child: GestureDetector(
+                  onTap: () {
+                    html.window.open('https://bilisimacademy.com/', 'new tab');
+                  },
+                  child: const Image(
+                    image: AssetImage('assets/balogobeyaz.jpg'),
+                  ),
+                ),
               ),
             ],
           ),
@@ -36,7 +44,7 @@ class Experience extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 150),
+              const SizedBox(height: 150),
               Text(
                 'Bilişim Academy',
                 style: TextStyle(

@@ -1,10 +1,6 @@
-import 'package:fwebportfolio/widgets/hover_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
-import 'package:fwebportfolio/widgets/intro.dart';
-import 'package:fwebportfolio/widgets/about.dart';
 
 class Skills extends StatelessWidget {
   const Skills({
@@ -55,7 +51,7 @@ class Skills extends StatelessWidget {
                         color: Colors.white,
                         fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
                   Padding(
@@ -119,11 +115,11 @@ class SkillList extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         SkillText(devWidth: devWidth, text: ktext1),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         SkillText(devWidth: devWidth, text: ktext2),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         SkillText(devWidth: devWidth, text: ktext3),
