@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, avoid_web_libraries_in_flutter
+
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';

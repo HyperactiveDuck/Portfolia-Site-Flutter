@@ -204,14 +204,14 @@ class DesktopWebState extends State<DesktopWeb> {
                           fontSize: 12,
                           fontFamily: GoogleFonts.oswald().fontFamily),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     TextButton(
                       onPressed: () {
                         html.window.open(
                             'https://github.com/HyperactiveDuck/Portfolio-Site-Flutter',
                             'new tab');
                       },
-                      child: Text(
+                      child: const Text(
                         'github',
                         style: TextStyle(color: Colors.white),
                       ),
