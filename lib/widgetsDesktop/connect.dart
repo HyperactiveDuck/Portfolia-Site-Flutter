@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:fwebportfolio/widgets/hover_text_widget.dart';
+import 'package:fwebportfolio/widgetsDesktop/hover_text_widget.dart';
 import 'dart:html' as html;
 
 class Connect extends StatelessWidget {

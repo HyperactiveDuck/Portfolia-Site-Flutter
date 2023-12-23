@@ -1,14 +1,14 @@
 import 'package:flutter/rendering.dart';
-import 'package:fwebportfolio/widgets/experience.dart';
-import 'package:fwebportfolio/widgets/hover_text_widget.dart';
+import 'package:fwebportfolio/widgetsDesktop/experience.dart';
+import 'package:fwebportfolio/widgetsDesktop/hover_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
-import 'package:fwebportfolio/widgets/cert.dart';
-import 'package:fwebportfolio/widgets/projects.dart';
-import 'package:fwebportfolio/widgets/connect.dart';
-import 'package:fwebportfolio/widgets/intro.dart';
-import 'package:fwebportfolio/widgets/about.dart';
-import 'package:fwebportfolio/widgets/skills.dart';
+import 'package:fwebportfolio/widgetsDesktop/cert.dart';
+import 'package:fwebportfolio/widgetsDesktop/projects.dart';
+import 'package:fwebportfolio/widgetsDesktop/connect.dart';
+import 'package:fwebportfolio/widgetsDesktop/intro.dart';
+import 'package:fwebportfolio/widgetsDesktop/about.dart';
+import 'package:fwebportfolio/widgetsDesktop/skills.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:html' as html;
 

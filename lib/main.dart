@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/web_desktop.dart';
+import 'screens/web_mobile.dart';
 
 void main() {
   // ignore: prefer_const_constructors
@@ -11,6 +12,7 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const DesktopWeb();
+    double deviceWidth = MediaQuery.of(context).size.width;
+    return deviceWidth > 800 ? const DesktopWeb() : const WebMobile();
   }
 }
