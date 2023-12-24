@@ -53,6 +53,7 @@ class DesktopWebState extends State<DesktopWeb> {
   Widget build(BuildContext context) {
     double devWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
+      title: 'Yücel Arda DEMİRCİ',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: kBlack, // background color

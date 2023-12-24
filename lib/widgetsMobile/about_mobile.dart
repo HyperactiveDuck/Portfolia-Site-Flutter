@@ -16,7 +16,7 @@ class AboutMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: devWidth,
-      height: devHeight * 1,
+      height: devHeight * 1.25,
       color: Secondery,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

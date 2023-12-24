@@ -17,7 +17,7 @@ class ExperienceMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Secondery,
-      height: devHeight * 0.8,
+      height: devHeight * 1,
       width: devWidth,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

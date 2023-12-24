@@ -16,7 +16,7 @@ class CertsMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: devHeight * 2,
+      height: devHeight * 2.35,
       width: devWidth,
       color: Secondery,
       child: Column(

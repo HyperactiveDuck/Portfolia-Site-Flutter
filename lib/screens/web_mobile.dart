@@ -62,6 +62,7 @@ class _WebMobileState extends State<WebMobile> {
     double devWidth = MediaQuery.of(context).size.width;
     double devHeight = MediaQuery.of(context).size.height;
     return MaterialApp(
+      title: 'Yücel Arda DEMİRCİ',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         key: _scaffoldKey,

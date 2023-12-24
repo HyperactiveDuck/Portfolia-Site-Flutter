@@ -16,7 +16,7 @@ class ProjectsMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: devHeight * 4,
+      height: devHeight * 5.25,
       width: devWidth,
       color: kBlack,
       child: Column(
