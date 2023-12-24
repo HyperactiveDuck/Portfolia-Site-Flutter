@@ -27,7 +27,9 @@ class NavBarMobile extends StatelessWidget {
             ),
             Spacer(),
             GestureDetector(
-              onTap: () {},
+              onTap: () {
+                Scaffold.of(context).openEndDrawer();
+              },
               child: Icon(
                 Icons.menu,
                 color: kAccent,

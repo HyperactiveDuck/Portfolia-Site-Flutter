@@ -32,6 +32,7 @@ class DesktopWebState extends State<DesktopWeb> {
   var key4 = GlobalKey();
   var key5 = GlobalKey();
   var key6 = GlobalKey();
+  var key7 = GlobalKey();
   ScrollController _scrollController = ScrollController();
 
   void scrollTo(GlobalKey key) {
@@ -60,6 +61,7 @@ class DesktopWebState extends State<DesktopWeb> {
           child: Column(
             children: [
               Align(
+                key: key7,
                 alignment: Alignment.center,
                 child: PreferredSize(
                   preferredSize: const Size.fromHeight(kToolbarHeight + 20),
@@ -218,7 +220,7 @@ class DesktopWebState extends State<DesktopWeb> {
                     ),
                     TextButton(
                       onPressed: () {
-                        scrollTo(key6);
+                        scrollTo(key7);
                       },
                       child: Text(
                         'Scroll to top',

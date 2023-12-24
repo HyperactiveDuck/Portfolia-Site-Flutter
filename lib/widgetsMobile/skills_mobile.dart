@@ -15,7 +15,7 @@ class SkillsMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: devHeight * 0.9,
+      height: devHeight * 1,
       width: devWidth,
       color: kBlack,
       child: Padding(
@@ -46,86 +46,89 @@ class SkillsMobile extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Container(
-                    height: devHeight * 0.38,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Flutter',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'Linux Server',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'Java',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'GIT',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'Dart',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'CSS',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                      ],
+                  Expanded(
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Flutter',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'Linux Server',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'Java',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'GIT',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'Dart',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'CSS',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Spacer(),
-                  Container(
-                    height: devHeight * 0.38,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Linux (Debian, Arch)',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'Python',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'PM Tools',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'Github',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'HTML',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                        Text(
-                          'JavaScript',
-                          style: GoogleFonts.teko(
-                              color: Colors.white, fontSize: 30),
-                        ),
-                      ],
+                  SizedBox(
+                    width: devWidth * 0.1,
+                  ),
+                  Expanded(
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Linux',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'Python',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'PM Tools',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'Github',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'HTML',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                          Text(
+                            'JavaScript',
+                            style: GoogleFonts.teko(
+                                color: Colors.white, fontSize: 30),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Spacer(),
                 ],
               )
             ],
