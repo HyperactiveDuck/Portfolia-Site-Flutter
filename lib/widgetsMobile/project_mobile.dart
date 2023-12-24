@@ -52,7 +52,8 @@ class ProjectsMobile extends StatelessWidget {
             child: ProjectCard(
               devHeight: devHeight,
               projectName: 'Yad To Do',
-              projectImage: Image(image: AssetImage('assets/yadtodo_3.png')),
+              projectImage:
+                  const Image(image: AssetImage('assets/yadtodo_3.png')),
             ),
           ),
           GestureDetector(
@@ -64,7 +65,7 @@ class ProjectsMobile extends StatelessWidget {
             child: ProjectCard(
               devHeight: devHeight,
               projectName: 'Group Chat',
-              projectImage: Image(
+              projectImage: const Image(
                 image: AssetImage('assets/gc1.png'),
               ),
             ),
@@ -78,7 +79,7 @@ class ProjectsMobile extends StatelessWidget {
             child: ProjectCard(
               devHeight: devHeight,
               projectName: 'Klima',
-              projectImage: Image(
+              projectImage: const Image(
                 image: AssetImage('assets/klima1.png'),
               ),
             ),
@@ -146,20 +147,20 @@ class UAFWProjectCard extends StatelessWidget {
                 fontSize: 40, color: Colors.white, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Image(
               image: AssetImage('assets/UAFW_1.png'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 0, 16),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 0, 0, 16),
             child: Image(
               image: AssetImage('assets/UAFW_2.png'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
             child: Image(
               image: AssetImage('assets/UAFW_3.png'),
             ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fwebportfolio/consts.dart';
 import 'package:fwebportfolio/widgetsMobile/navbarmobile.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'dart:html' as html;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:fwebportfolio/widgetsMobile/intro_mobile.dart';
@@ -11,7 +10,6 @@ import 'package:fwebportfolio/widgetsMobile/expereince_mobile.dart';
 import 'package:fwebportfolio/widgetsMobile/project_mobile.dart';
 import 'package:fwebportfolio/widgetsMobile/certs_mobile.dart';
 import 'package:fwebportfolio/widgetsMobile/contact_mobile.dart';
-import 'package:fwebportfolio/widgetsMobile/bottombar_mobile.dart';
 import 'package:flutter/rendering.dart';
 
 class WebMobile extends StatefulWidget {
@@ -82,7 +80,7 @@ class _WebMobileState extends State<WebMobile> {
                 ),
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'About',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -93,7 +91,7 @@ class _WebMobileState extends State<WebMobile> {
                 },
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Skills',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -104,7 +102,7 @@ class _WebMobileState extends State<WebMobile> {
                 },
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Experience',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -115,7 +113,7 @@ class _WebMobileState extends State<WebMobile> {
                 },
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Projects',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -126,7 +124,7 @@ class _WebMobileState extends State<WebMobile> {
                 },
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Certificates',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -137,7 +135,7 @@ class _WebMobileState extends State<WebMobile> {
                 },
               ),
               ListTile(
-                title: Text(
+                title: const Text(
                   'Contact',
                   textAlign: TextAlign.end,
                   style: TextStyle(color: Colors.white),
@@ -202,23 +200,23 @@ class _WebMobileState extends State<WebMobile> {
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(
                     children: [
-                      Text(
+                      const Text(
                         '© 2023 Yücel Arda DEMİRCİ',
                         style: TextStyle(color: Colors.white, fontSize: 10),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GestureDetector(
                         onTap: () {
                           html.window.open(
                               'https://github.com/HyperactiveDuck/Portfolio-Site-Flutter',
                               'new tab');
                         },
-                        child: Text(
+                        child: const Text(
                           'github',
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 20,
                       ),
                       GestureDetector(

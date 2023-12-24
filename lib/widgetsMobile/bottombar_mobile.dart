@@ -18,16 +18,16 @@ class BottomBarMobile extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20.0),
         child: Row(
           children: [
-            Text(
+            const Text(
               '© 2023 Yücel Arda DEMİRCİ',
               style: TextStyle(color: Colors.white, fontSize: 10),
             ),
-            Spacer(),
-            Text(
+            const Spacer(),
+            const Text(
               'github',
               style: TextStyle(color: Colors.white),
             ),
-            SizedBox(
+            const SizedBox(
               width: 20,
             ),
             Text(

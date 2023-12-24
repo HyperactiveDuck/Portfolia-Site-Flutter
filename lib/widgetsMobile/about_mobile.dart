@@ -24,22 +24,22 @@ class AboutMobile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              child: Image.asset('assets/YAD_BIG.jpg'),
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.2),
                     spreadRadius: 5,
                     blurRadius: 10,
-                    offset: Offset(0, 3), // changes position of shadow
+                    offset: const Offset(0, 3), // changes position of shadow
                   ),
                 ],
               ),
+              child: Image.asset('assets/YAD_BIG.jpg'),
             ),
           ),
-          SizedBox(height: 5),
+          const SizedBox(height: 5),
           Padding(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             child: Container(
               width: devWidth * 0.9,
               height: devHeight * 0.4,
@@ -66,7 +66,7 @@ class AboutMobile extends StatelessWidget {
                   SizedBox(height: devHeight * 0.05),
                   Text(
                     kAbout,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   )
                 ],
               ),

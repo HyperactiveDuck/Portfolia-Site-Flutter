@@ -42,7 +42,7 @@ class CertsMobile extends StatelessWidget {
                   'https://www.udemy.com/certificate/UC-4662dc37-cc12-4bdf-91c2-277ea13c58eb/',
                   'new tab');
             },
-            child: CertCardMobile(
+            child: const CertCardMobile(
               certName: 'App Brewery Flutter Bootcamp',
               certImage: 'assets/UCCert.jpg',
             ),
@@ -56,7 +56,7 @@ class CertsMobile extends StatelessWidget {
                   'https://www.credly.com/badges/2293829e-62ca-40ee-8a83-0d3f0b50ca69',
                   'new tab');
             },
-            child: CertCardMobile(
+            child: const CertCardMobile(
               certName: '        Cisco CyberOps Associate        ',
               certImage: 'assets/cyberops.png',
             ),
@@ -70,7 +70,7 @@ class CertsMobile extends StatelessWidget {
                   'https://www.coursera.org/account/accomplishments/verify/7NJ7GW9LU3CX',
                   'new tab');
             },
-            child: CertCardMobile(
+            child: const CertCardMobile(
               certName: 'Google Proffesional Project Manager',
               certImage: 'assets/google.jpg',
             ),
@@ -82,7 +82,7 @@ class CertsMobile extends StatelessWidget {
             onTap: () => html.window.open(
                 'https://drive.google.com/file/d/1-dUOmWY3cWJpHA26NZe4NpPkNqGmFZ2t/view?usp=sharing',
                 'new tab'),
-            child: CertCardMobile(
+            child: const CertCardMobile(
               certName: 'Schneider Electric Sales & Marketing',
               certImage: 'assets/schneider.png',
             ),
@@ -110,14 +110,15 @@ class CertCardMobile extends StatelessWidget {
           Expanded(
             flex: 4,
             child: ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(12.0)),
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(12.0)),
               child: Image(
                 image: AssetImage('$certImage'),
                 fit: BoxFit.cover,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Expanded(

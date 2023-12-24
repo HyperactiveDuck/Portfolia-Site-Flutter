@@ -42,9 +42,9 @@ class ExperienceMobile extends StatelessWidget {
             onTap: () {
               html.window.open('https://bilisimacademy.com/', 'new tab');
             },
-            child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Image(
+            child: const Padding(
+              padding: EdgeInsets.all(16.0),
+              child: const Image(
                 image: AssetImage('assets/balogobeyaz.jpg'),
               ),
             ),

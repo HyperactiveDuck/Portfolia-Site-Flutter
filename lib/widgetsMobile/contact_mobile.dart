@@ -44,7 +44,7 @@ class ContactMobile extends StatelessWidget {
             ),
             Text(
               kConnect,
-              style: TextStyle(color: Colors.white),
+              style: const TextStyle(color: Colors.white),
             ),
             SizedBox(
               height: devHeight * 0.02,
@@ -62,7 +62,7 @@ class ContactMobile extends StatelessWidget {
                     fontWeight: FontWeight.w300),
               ),
             ),
-            SelectableText(
+            const SelectableText(
               '(or copy) demirciyucelarda@gmail.com',
               style: TextStyle(color: Colors.white30),
             ),

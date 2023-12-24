@@ -21,11 +21,11 @@ class NavBarMobile extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 25,
               backgroundImage: AssetImage('assets/yad.jpg'),
             ),
-            Spacer(),
+            const Spacer(),
             GestureDetector(
               onTap: () {
                 Scaffold.of(context).openEndDrawer();
